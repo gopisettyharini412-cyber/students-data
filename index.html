@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Yukta's Python Academy</title>
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<h1>Python & MySQL Classes for Beginners</h1>
+
+<h2>Course Features</h2>
+
+<ul>
+    <li>Basics to Advanced Concepts</li>
+    <li>Interview Questions and Coding Practice</li>
+    <li>Projects and Assignments</li>
+    <li>Online/Offline Classes</li>
+</ul>
+
+<h3>Course Fee: ₹3,000</h3>
+
+<h1 style="font-size:20px;">Register Here</h1>
+
+{% if message %}
+    <h2 class="success">{{ message }}</h2>
+{% endif %}
+
+<form action="/register" method="POST">
+
+    <label>Name:</label>
+    <input type="text" name="name" placeholder="Enter your name" required>
+
+    <label>Phone Number:</label>
+    <input type="text" name="phone" placeholder="Enter your phone number" required>
+
+    <label>Email:</label>
+    <input type="email" name="email" placeholder="Enter your email" required>
+
+    <button type="submit">Register</button>
+
+</form>
+
+</body>
+</html>
