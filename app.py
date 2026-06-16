@@ -2,7 +2,7 @@ from flask import Flask, render_template, request
 import mysql.connector
 import os
 
-app = Flask(_name_)
+app = Flask(__name__)
 
 # =========================
 # DATABASE CONNECTION
@@ -49,5 +49,5 @@ def register():
 # =========================
 # RUN APP
 # =========================
-if _name_ == "_main_":
+if __name__ == "__main__":
     app.run(debug=True)
