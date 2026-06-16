@@ -8,6 +8,7 @@ app = Flask(__name__)
 # DATABASE CONNECTION
 # =========================
 def get_db_connection():
+    print("DB HOST:", os.environ.get("DB_HOST"))
     try:
         return mysql.connector.connect(
             host=os.environ.get("DB_HOST"),
