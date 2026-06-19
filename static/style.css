@@ -14,11 +14,6 @@ h2 {
     font-size: 20px;
 }
 
-h3 {
-    color: crimson;
-    font-size: 18px;
-}
-
 ul {
     display: inline-block;
     text-align: left;
@@ -38,6 +33,16 @@ label {
     display: block;
     text-align: left;
     font-size: 15px;    
+}
+
+select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
 }
 
 input {
