@@ -36,12 +36,13 @@ def register():
     name = request.form["name"]
     phone = request.form["phone"]
     email = request.form["email"]
+    course = request.form["course"]
 
     db = get_db_connection()
     cursor = db.cursor()
 
-    sql = "INSERT INTO registrations (name, phone, email) VALUES (%s, %s, %s)"
-    values = (name, phone, email)
+    sql = "INSERT INTO registrations (name, phone, email, course) VALUES (%s, %s, %s, %s)"
+    values = (name, phone, email, course)
 
     cursor.execute(sql, values)
     db.commit()
